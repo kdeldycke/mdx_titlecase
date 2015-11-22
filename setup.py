@@ -58,6 +58,8 @@ setup(
     license='GPLv2+',
 
     install_requires=[
+        'markdown',
+        'titlecase',
     ],
 
     packages=find_packages(),
