@@ -19,3 +19,36 @@
 from __future__ import (
     division, print_function, absolute_import, unicode_literals
 )
+
+import re
+
+import markdown
+from markdown.util import etree
+from titlecase import titlecase
+
+
+class TitlecaseExtension(markdown.Extension):
+
+    def __init__(self, **kwargs):
+        """ Merge user and default configuration. """
+        # Default settings.
+        self.config = {
+            'foo': ['fighter', 'Option description.'],
+        }
+        # Override defaults with user settings.
+        for key, value in kwargs.items():
+            self.setConfig(key, str(value))
+
+    def extendMarkdown(self, md, md_globals):
+        md.treeprocessors.add('titlecase', TitlecaseProcessor(), '_end')
+
+
+class TitlecaseProcessor(markdown.treeprocessors.Treeprocessor):
+
+    def run(self, node):
+        expr = re.compile('h\d')
+        for child in node.getiterator():
+            match = expr.match(child.tag)
+            if match:
+                child.text = titlecase(child.text)
+        return node

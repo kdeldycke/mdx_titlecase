@@ -20,3 +20,11 @@
 
 
 __version__ = '0.0.1'
+
+
+from mdx_titlecase import TitlecaseExtension
+
+
+def makeExtension(**kwargs):
+    """ Register extension. """
+    return TitlecaseExtension(**kwargs)
