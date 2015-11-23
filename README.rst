@@ -27,8 +27,8 @@ Development: |build| |coverage| |quality|
 .. |build| image:: https://img.shields.io/travis/kdeldycke/mdx_titlecase/develop.svg?style=flat
     :target: https://travis-ci.org/kdeldycke/mdx_titlecase
     :alt: Unit-tests status
-.. |coverage| image:: https://coveralls.io/repos/kdeldycke/mdx_titlecase/badge.svg?branch=develop&service=github
-    :target: https://coveralls.io/r/kdeldycke/mdx_titlecase?branch=develop
+.. |coverage| image:: https://codecov.io/github/kdeldycke/mdx_titlecase/coverage.svg?branch=develop
+    :target: https://codecov.io/github/kdeldycke/mdx_titlecase?branch=develop
     :alt: Coverage Status
 .. |quality| image:: https://img.shields.io/scrutinizer/g/kdeldycke/mdx_titlecase.svg?style=flat
     :target: https://scrutinizer-ci.com/g/kdeldycke/mdx_titlecase/?branch=develop

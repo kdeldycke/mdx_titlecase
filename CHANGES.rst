@@ -5,7 +5,7 @@ ChangeLog
 1.0.1 (unreleased)
 ------------------
 
-* No changes yet.
+* Switch from coveralls.io to codecov.io.
 
 
 1.0.0 (2015-11-23)
