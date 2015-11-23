@@ -4,8 +4,9 @@ mdx_titlecase
 Proper title-casing for `Python's Markdown
 <https://pythonhosted.org/Markdown/>`_ library.
 
-Use `titlecase <https://pypi.python.org/pypi/titlecase>`_ module under the
-hood.
+This Markdown extension use `titlecase
+<https://pypi.python.org/pypi/titlecase>`_ module under the hood to apply the
+right casing to content enclosed in ``<h1>`` to ``<h6>`` HTML tags.
 
 Stable release: |release| |license| |dependencies| |popularity|
 
