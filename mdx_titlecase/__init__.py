@@ -19,7 +19,7 @@
 """ Expose package-wide elements. """
 
 
-__version__ = '1.0.2'
+__version__ = '1.1.0'
 
 
 from mdx_titlecase import TitlecaseExtension
