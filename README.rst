@@ -1,15 +1,14 @@
-mdx_titlecase
-=============
+Markdown title-casing extension
+===============================
 
-Proper title-casing for `Python's Markdown
-<https://pythonhosted.org/Markdown/>`_ library.
+`Python's Markdown <https://pythonhosted.org/Markdown/>`_ extension to apply
+proper English title-casing.
 
-This Markdown extension use `titlecase
-<https://pypi.python.org/pypi/titlecase>`_ module under the hood to apply the
-right casing to content enclosed in ``<h1>`` to ``<h6>`` HTML tags.
-
-This extension is compatible with the `Meta-Data extension
-<https://pythonhosted.org/Markdown/extensions/meta_data.html>`_.
+This project use `titlecase <https://pypi.python.org/pypi/titlecase>`_ module
+under the hood. Transformation is applied on content enclosed in ``<h1>`` to
+``<h6>`` HTML tags. `Meta-Data extension
+<https://pythonhosted.org/Markdown/extensions/meta_data.html>`_ is supported so
+that document title can be transformed too.
 
 Stable release: |release| |license| |dependencies| |popularity|
 
