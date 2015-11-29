@@ -32,13 +32,13 @@ class MDXTitlecase(unittest.TestCase):
     def test_load_extension_as_object(self):
         markdown.markdown('', extensions=[TitlecaseExtension()])
 
-    def test_configs_parameter(self):
+    def test_custom_config(self):
         md = markdown.Markdown()
-        md.registerExtension(TitlecaseExtension(foo='bar'))
+        md.registerExtension(TitlecaseExtension(metadata=['foo', 'bar']))
         ext = md.registeredExtensions[0]
-        self.assertEqual(ext.config['foo'][0], 'bar')
+        self.assertEqual(ext.config['metadata'][0], ['foo', 'bar'])
 
-    def test_title_casing(self):
+    def test_subtitle_casing(self):
         text = textwrap.dedent("""
             un-cased article title of the year
             ==================================
@@ -57,3 +57,48 @@ class MDXTitlecase(unittest.TestCase):
             <p>Lorem ipsum.</p>""")
         output = markdown.markdown(text, extensions=[TitlecaseExtension()])
         self.assertEqual(output, html)
+
+    def test_default_metadata_casing(self):
+        text = textwrap.dedent("""\
+            Title: un-cased article title of the year
+            Foo: secondary item in the metadata section
+
+            sub-title of the day
+            --------------------
+
+            Lorem ipsum.
+            """).encode('utf-8')
+        html = textwrap.dedent("""\
+            <h2>Sub-Title of the Day</h2>
+            <p>Lorem ipsum.</p>""")
+        md = markdown.Markdown(extensions=[
+            TitlecaseExtension(), 'markdown.extensions.meta'])
+        output = md.convert(text)
+        self.assertEqual(output, html)
+        self.assertEqual(md.Meta, {
+            'title': ['Un-Cased Article Title of the Year'],
+            'foo': ['secondary item in the metadata section'],
+        })
+
+    def test_custom_metadata_casing(self):
+        text = textwrap.dedent("""\
+            Title: un-cased article title of the year
+            Foo: secondary item in the metadata section
+
+            sub-title of the day
+            --------------------
+
+            Lorem ipsum.
+            """).encode('utf-8')
+        html = textwrap.dedent("""\
+            <h2>Sub-Title of the Day</h2>
+            <p>Lorem ipsum.</p>""")
+        md = markdown.Markdown(extensions=[
+            TitlecaseExtension(metadata=['foo', 'bar']),
+            'markdown.extensions.meta'])
+        output = md.convert(text)
+        self.assertEqual(output, html)
+        self.assertEqual(md.Meta, {
+            'title': ['un-cased article title of the year'],
+            'foo': ['Secondary Item in the Metadata Section'],
+        })

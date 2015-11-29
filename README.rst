@@ -8,6 +8,9 @@ This Markdown extension use `titlecase
 <https://pypi.python.org/pypi/titlecase>`_ module under the hood to apply the
 right casing to content enclosed in ``<h1>`` to ``<h6>`` HTML tags.
 
+This extension is compatible with the `Meta-Data extension
+<https://pythonhosted.org/Markdown/extensions/meta_data.html>`_.
+
 Stable release: |release| |license| |dependencies| |popularity|
 
 Development: |build| |coverage| |quality|

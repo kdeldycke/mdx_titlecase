@@ -5,7 +5,7 @@ ChangeLog
 1.0.2 (unreleased)
 ------------------
 
-* No changes yet.
+* Allow title casing of metadata.
 
 
 1.0.1 (2015-11-23)

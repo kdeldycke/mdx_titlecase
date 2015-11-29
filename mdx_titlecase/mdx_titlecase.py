@@ -22,33 +22,49 @@ from __future__ import (
 
 import re
 
-import markdown
+from markdown import Extension
+from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
 from titlecase import titlecase
 
 
-class TitlecaseExtension(markdown.Extension):
+class TitlecaseExtension(Extension):
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         """ Merge user and default configuration. """
         # Default settings.
         self.config = {
-            'foo': ['fighter', 'Option description.'],
+            'metadata': [
+                ['title'],
+                'List of metadata keys to which apply titlecasing.'],
         }
+
         # Override defaults with user settings.
         for key, value in kwargs.items():
             self.setConfig(key, str(value))
 
+        super(TitlecaseExtension, self).__init__(*args, **kwargs)
+
     def extendMarkdown(self, md, md_globals):
-        md.treeprocessors.add('titlecase', TitlecaseProcessor(), '_end')
+        md.registerExtension(self)
+        self.processor = TitlecaseTreeprocessor()
+        self.processor.md = md
+        self.processor.config = self.getConfigs()
+        md.treeprocessors.add('headerid', self.processor, '_end')
 
 
-class TitlecaseProcessor(markdown.treeprocessors.Treeprocessor):
+class TitlecaseTreeprocessor(Treeprocessor):
 
     def run(self, node):
-        expr = re.compile('h\d')
+        # Apply transformation to all <hx> tags.
         for child in node.getiterator():
-            match = expr.match(child.tag)
-            if match:
+            if child.tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
                 child.text = titlecase(child.text)
+
+        # Apply transformation to metadata.
+        if hasattr(self.md, 'Meta'):
+            for key in self.config['metadata']:
+                if key in self.md.Meta:
+                    self.md.Meta[key] = map(titlecase, self.md.Meta[key])
+
         return node
