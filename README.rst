@@ -53,6 +53,17 @@ See also `pip installation instructions
 <https://pip.pypa.io/en/stable/installing/>`_.
 
 
+Configuration
+-------------
+
++--------------+-----------------+--------------------------------------------+
+| Parameter    | Default value   | Description                                |
++==============+=================+============================================+
+| ``metadata`` | ``['title', ]`` | List of metadata keys to which apply       |
+|              |                 | titlecasing.                               |
++--------------+-----------------+--------------------------------------------+
+
+
 Development
 -----------
 
