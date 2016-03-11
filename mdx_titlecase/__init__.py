@@ -22,7 +22,7 @@
 __version__ = '1.1.1'
 
 
-from mdx_titlecase.mdx_titlecase import TitlecaseExtension
+from .mdx_titlecase import TitlecaseExtension
 
 
 def makeExtension(**kwargs):
