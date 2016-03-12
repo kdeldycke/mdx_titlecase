@@ -16,6 +16,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
+from __future__ import (
+    division, print_function, absolute_import, unicode_literals
+)
+
 import textwrap
 import unittest
 
@@ -49,7 +53,7 @@ class MDXTitlecase(unittest.TestCase):
             --------------------
 
             Lorem ipsum.
-            """).encode('utf-8')
+            """)
         html = textwrap.dedent("""\
             <h1>Un-Cased Article Title of the Year</h1>
             <p>This is a stupid sentence.</p>
@@ -67,7 +71,7 @@ class MDXTitlecase(unittest.TestCase):
             --------------------
 
             Lorem ipsum.
-            """).encode('utf-8')
+            """)
         html = textwrap.dedent("""\
             <h2>Sub-Title of the Day</h2>
             <p>Lorem ipsum.</p>""")
@@ -89,7 +93,7 @@ class MDXTitlecase(unittest.TestCase):
             --------------------
 
             Lorem ipsum.
-            """).encode('utf-8')
+            """)
         html = textwrap.dedent("""\
             <h2>Sub-Title of the Day</h2>
             <p>Lorem ipsum.</p>""")
