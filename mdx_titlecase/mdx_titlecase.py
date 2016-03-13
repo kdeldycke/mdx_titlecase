@@ -65,6 +65,7 @@ class TitlecaseTreeprocessor(Treeprocessor):
         if hasattr(self.md, 'Meta'):
             for key in self.config['metadata']:
                 if key in self.md.Meta:
-                    self.md.Meta[key] = map(titlecase, self.md.Meta[key])
+                    self.md.Meta[key] = [
+                        titlecase(v) for v in self.md.Meta[key]]
 
         return node
