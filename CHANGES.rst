@@ -5,7 +5,7 @@ ChangeLog
 1.1.1 (unreleased)
 ------------------
 
-* No changes yet.
+* Add default ``isort`` config.
 
 
 1.1.0 (2015-11-29)
