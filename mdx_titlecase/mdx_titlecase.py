@@ -17,15 +17,19 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 from __future__ import (
-    division, print_function, absolute_import, unicode_literals
+    absolute_import,
+    division,
+    print_function,
+    unicode_literals
 )
 
 import re
 
+from titlecase import titlecase
+
 from markdown import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
-from titlecase import titlecase
 
 
 class TitlecaseExtension(Extension):
