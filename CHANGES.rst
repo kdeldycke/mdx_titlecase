@@ -6,6 +6,7 @@ ChangeLog
 ------------------
 
 * Add default ``isort`` config.
+* Activate tests on Python 3.3, PyPy and PyPy3.
 
 
 1.1.0 (2015-11-29)
