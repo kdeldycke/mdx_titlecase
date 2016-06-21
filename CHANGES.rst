@@ -27,7 +27,7 @@ ChangeLog
 * First public release.
 
 
-`0.0.0 (2015-11-22) <http://github.com/kdeldycke/mdx_titlecase/tree/v0.0.0>`_
------------------------------------------------------------------------------
+`0.0.0 (2015-11-22) <http://github.com/kdeldycke/mdx_titlecase/commit/8c24bb>`_
+-------------------------------------------------------------------------------
 
 * First commit.
