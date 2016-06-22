@@ -5,8 +5,10 @@ ChangeLog
 `1.2.0 (unreleased) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.1.0...develop>`_
 ------------------------------------------------------------------------------------------
 
+* Add Python 3 support.
 * Add default ``isort`` config.
-* Activate tests on Python 3.3, PyPy and PyPy3.
+* Add missing trove classifiers.
+* Activate tests on Python 3.3, 3.4, 3.5, PyPy and PyPy3.
 
 
 `1.1.0 (2015-11-29) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.0.1...v1.1.0>`_
