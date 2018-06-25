@@ -2,6 +2,12 @@ ChangeLog
 =========
 
 
+`1.2.1 (unreleased) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.2.0...develop>`_
+------------------------------------------------------------------------------------------
+
+* No changes yet.
+
+
 `1.2.0 (2018-06-26) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.1.0...v1.2.0>`_
 -----------------------------------------------------------------------------------------
 
