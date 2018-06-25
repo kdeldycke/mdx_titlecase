@@ -23,8 +23,6 @@ from __future__ import (
     unicode_literals
 )
 
-import re
-
 from titlecase import titlecase
 
 from markdown import Extension
