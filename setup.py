@@ -57,7 +57,7 @@ setup(
     license='GPLv2+',
 
     install_requires=[
-        'markdown',
+        'Markdown >= 2.6',
         'titlecase',
     ],
 
