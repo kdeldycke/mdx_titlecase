@@ -27,13 +27,14 @@ import textwrap
 import unittest
 
 import markdown
-from mdx_titlecase import TitlecaseExtension
+from mdx_titlecase.mdx_titlecase import TitlecaseExtension
 
 
 class MDXTitlecase(unittest.TestCase):
 
     def test_load_extension_as_string(self):
-        markdown.markdown('', extensions=['titlecase'])
+        markdown.markdown(
+            '', extensions=['mdx_titlecase.mdx_titlecase:TitlecaseExtension'])
 
     def test_load_extension_as_object(self):
         markdown.markdown('', extensions=[TitlecaseExtension()])
