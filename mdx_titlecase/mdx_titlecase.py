@@ -71,3 +71,8 @@ class TitlecaseTreeprocessor(Treeprocessor):
                         titlecase(v) for v in self.md.Meta[key]]
 
         return node
+
+
+def makeExtension(**kwargs):
+    """ Register extension. """
+    return TitlecaseExtension(**kwargs)

@@ -5,6 +5,7 @@ ChangeLog
 `1.2.0 (unreleased) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.1.0...develop>`_
 ------------------------------------------------------------------------------------------
 
+* Fix plugin initialization.
 * Add Python 3 support.
 * Add default ``isort`` config.
 * Add missing trove classifiers.
