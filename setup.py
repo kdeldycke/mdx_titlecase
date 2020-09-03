@@ -83,6 +83,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Text Processing :: Filters',
-        'Topic :: Text Processing :: Markup',
+        'Topic :: Text Processing :: Markup :: Markdown',
     ],
 )
