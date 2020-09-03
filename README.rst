@@ -23,8 +23,8 @@ Development: |build| |coverage| |quality|
 .. |popularity| image:: https://img.shields.io/pypi/dm/mdx_titlecase.svg?style=flat
     :target: https://pypi.python.org/pypi/mdx_titlecase#downloads
     :alt: Popularity
-.. |dependencies| image:: https://img.shields.io/requires/github/kdeldycke/mdx_titlecase/master.svg?style=flat
-    :target: https://requires.io/github/kdeldycke/mdx_titlecase/requirements/?branch=master
+.. |dependencies| image:: https://img.shields.io/requires/github/kdeldycke/mdx_titlecase/main.svg?style=flat
+    :target: https://requires.io/github/kdeldycke/mdx_titlecase/requirements/?branch=main
     :alt: Requirements freshness
 .. |build| image:: https://img.shields.io/travis/kdeldycke/mdx_titlecase/develop.svg?style=flat
     :target: https://travis-ci.org/kdeldycke/mdx_titlecase
@@ -126,7 +126,7 @@ released date in the changelog:
 
     $ vi ./CHANGES.rst
 
-Create a release commit, tag it and merge it back to ``master`` branch:
+Create a release commit, tag it and merge it back to ``main`` branch:
 
 .. code-block:: bash
 
@@ -135,7 +135,7 @@ Create a release commit, tag it and merge it back to ``master`` branch:
     $ git tag "vX.Y.Z"
     $ git push
     $ git push --tags
-    $ git checkout master
+    $ git checkout main
     $ git pull
     $ git merge "vX.Y.Z"
     $ git push
@@ -186,4 +186,4 @@ License
 
 This software is licensed under the `GNU General Public License v2 or later
 (GPLv2+)
-<https://github.com/kdeldycke/mdx_titlecase/blob/master/LICENSE>`_.
+<https://github.com/kdeldycke/mdx_titlecase/blob/main/LICENSE>`_.
