@@ -52,7 +52,7 @@ class TitlecaseExtension(Extension):
         self.processor = TitlecaseTreeprocessor()
         self.processor.md = md
         self.processor.config = self.getConfigs()
-        md.treeprocessors.add('headerid', self.processor, '_end')
+        md.treeprocessors.add('headerid', self.processor, '_begin')
 
 
 class TitlecaseTreeprocessor(Treeprocessor):
