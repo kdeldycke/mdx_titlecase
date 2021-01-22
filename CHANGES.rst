@@ -5,7 +5,7 @@ ChangeLog
 `1.2.1 (unreleased) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.2.0...develop>`_
 ------------------------------------------------------------------------------------------
 
-* No changes yet.
+* Fix title-casing of auto-generated TOC. Refs #3.
 
 
 `1.2.0 (2018-06-26) <http://github.com/kdeldycke/mdx_titlecase/compare/v1.1.0...v1.2.0>`_
